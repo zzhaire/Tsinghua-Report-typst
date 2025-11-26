@@ -56,7 +56,7 @@
   )
 
   #v(30pt)
-  #text("本科毕业设计（论文）", font: font-family.hei, size: font-size.at("-0"))
+  #text("网络应用安全阅读报告", font: font-family.hei, size: font-size.at("-0"))
   #v(60pt)
 
   #set text(font: font-family.hei, size: font-size.at("-2"))
