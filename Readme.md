@@ -26,3 +26,29 @@
 
 ![](assets/Readme/image-3.png)
 
+### 导出 pdf
+### 打开 init-files / main.typ
+### 点击上方小按钮
+![alt text](assets/Readme/image-4.png)
+
+## typst 语法和使用说明, 可看原仓库或参考 llm 
+![alt text](assets/Readme/image-5.png)
+
+## tips 如何快速粘贴图片
+
+### 下载 vscode 插件 paste-image
+![alt text](assets/Readme/image-6.png)
+
+### 配置插入格式
+
+![alt text](assets/Readme/image-7.png)
+![alt text](assets/Readme/image-8.png)
+
+```
+#figure(  image("../images/${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}", width: 100%),  caption: "",) <img>
+```
+### 设置快捷键
+
+![alt text](assets/Readme/image-9.png)
+
+![alt text](assets/Readme/image-10.png)
