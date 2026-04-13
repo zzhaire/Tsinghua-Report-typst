@@ -3,7 +3,22 @@
 #set pagebreak(weak: true)
 
 #let thesis(
-  school: "某学院", major: "某专业", id: "0000000", student: "某某某",  title: "某标题", subtitle: "某副标题", title-english: "Some Title", subtitle-english: "Some Subtitle", date: datetime.today(), abstract: "慧枫尚萍氢，驳展妙棚端梦称委竞励。绘象臂淬人壳闭营风混仓、问抬兽村蜡胡锹挤污艰烃伏惧派宝既抓章住蓟棒褶均谭穿谴属；羟贮银…钓郭曾牙记氢硝巍仰蒲邀趟。革旅剑撞压单施宵饼狼将售烷贸问术粮洞魔。却烟陕倍且隘框糟秩板商，宙刚疮顿表羽楞景哺驯邮戒歌溜著聪峻忙劈左绩卖卫萨讯完读百釉好仔帜纽龟玉炒脂衍蛴瓦副冯查索桐梁；轴派？蝗丸朝保岂搅搞燕挫品休礼倾玻黑李宽列邮苦仔汛鳙物己弱寸栓孝哄俭牙敬厄搬吨楞干捧原趋息…善！", keywords: ("关键词1", "关键词2", "关键词3"), abstract-english: lorem(300), keywords-english: ("Keyword1", "keyword2", "keyword3"), doc,
+  email:"邮箱",
+  num:"手机号",
+  banhao: "班号",
+  school: "某学院", 
+  major: "某专业", 
+  id: "0000000", 
+  student: "某某某",  
+  title: "某标题", 
+  subtitle: "某副标题", 
+  title-english: "Some Title", 
+  subtitle-english: "Some Subtitle", 
+  date: datetime.today(), 
+  abstract: "这是摘要， 摘要摘要摘要。。。。此处省略 1w 字", 
+  keywords: ("关键词1", "关键词2", "关键词3"), abstract-english: lorem(300), 
+  keywords-english: ("Keyword1", "keyword2", "keyword3"), 
+  doc,
 ) = {
   set document(author: id + " " + student, title: title)
   set page(
@@ -13,9 +28,19 @@
 
   make-cover(
     (
-      "课题名称", title, "副标题", subtitle, "学院", school, "学生姓名", student, "学号", id,  "日期", date.display("[year]年[month]月[day]日"),
+      "题目" , title,
+      "班号" ,banhao,
+      "姓名", student, 
+      "学号", id, 
+
+      "院系", school, 
+      "手机号",num , 
+      "邮箱", email,
+      // "日期", date.display("[year]年[month]月"),
     ),
+
   )
+
   pagebreak()
 
   set par(justify: true, first-line-indent: 2em, leading: 0.9em)
@@ -103,11 +128,13 @@
   show math.equation.where(block: true): i-figured.show-equation
   show figure.where(kind: table): set figure.caption(position: top)
 
+
+// TODO 这里可以修改你的图片
   set page(
     numbering: "I", header: {
       set text(font: font-family.song, font-size.at("-4"))
       grid(
-        columns: (0.5em, 1fr, auto, 0.5em), [], image("figures/Tsinghua.svg", height: 1cm), block(height: 0.7cm, [#set align(right); 课程报告]), [],
+        columns: (0.5em, 1fr, auto, 0.5em), [], image("figures/Tsinghua-icon.svg", height: 1cm), block(height: 0.7cm, [#set align(right); 课程报告]), [],
       )
       v(-0.5em)
       line(length: 100%, stroke: 1.8pt)
@@ -120,10 +147,10 @@
   )
   counter(page).update(1)
 
-  // make-abstract(
-  //   title: title, abstract: abstract, keywords: keywords, prompt: ("摘要", "关键词：")
-  // )
-  // pagebreak()
+  make-abstract(
+    title: title, abstract: abstract, keywords: keywords, prompt: ("摘要", "关键词：")
+  )
+  pagebreak()
 
   // make-abstract(
   //   title: title-english, abstract: abstract-english, keywords: keywords-english, prompt: ("ABSTRACT", "Key words: "), is-english: true,

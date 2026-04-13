@@ -3,7 +3,15 @@
 #set pagebreak(weak: true)
 
 #show: thesis.with(
-  school: "网络科学与网络空间研究院",  id: " 2025213423", student: " 张哲源", title: "XXXXXXXX", subtitle: [XXXXXXXX], title-english: "Thesis Template", subtitle-english: "with Various Scenes", date: datetime(
+  num: "13764470810",
+  email:"zheyuan-25@tsinghua.mails.edu.cn",
+  school: "网络科学与网络空间研究院",  
+  id: " 2025213423", 
+  student: " 张哲源", 
+  title: "XXXXXXXX", 
+  subtitle: [XXXXXXXX], 
+  title-english: "Thesis Template", subtitle-english: "with Various Scenes", 
+  date: datetime(
     year: datetime.today().year(), month: datetime.today().month(), day: datetime.today().day(),
   )
 )

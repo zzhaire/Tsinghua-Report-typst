@@ -47,7 +47,7 @@
 
 #let make-cover(cover) = align(center)[
   // #image("figures/tongji.svg", height: 2.25cm)
-  #image("figures/Tsinghua.svg", height: 3.00cm)
+  #image("figures/Tsinghua-icon.svg", height: 3.00cm)
   #text(
     "TSINGHUA UNIVERSITY",
     font: font-family.hei,
@@ -56,7 +56,7 @@
   )
 
   #v(30pt)
-  #text("网络应用安全阅读报告", font: font-family.hei, size: font-size.at("-0"))
+  #text("2026年春季学期自然辩证法概论课程作业", font: font-family.hei, size: font-size.at("-0"))
   #v(60pt)
 
   #set text(font: font-family.hei, size: font-size.at("-2"))
